@@ -1,0 +1,22 @@
+{
+    "name": "Joel Arancibia",
+    "backImage": "", 
+    "image": "./imagenes/fondo2.jpg", 
+    "position": "estudiante",
+    "company": {
+
+    },
+    "ubication": "Santa Fe (Argentina)",
+    "education": [{
+        
+        "school": "Escuela Secundaria",
+        "title": "Tecnico",
+        "img": "url",
+        "career": "Tecnico Informatico",
+        "score": 0,
+        "start": "----",
+        "end": "----"
+    }
+    ]
+    
+}

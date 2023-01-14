@@ -1,0 +1,20 @@
+<div class="proyectos">
+          <div class="proyectosTitulo"><h2>Proyectos</h2></div>
+        <div *ngFor="let item of Proyectos">
+        <h3>{{item.nombre}}</h3>
+        <div>{{item.info}}</div>
+        <div *ngIf="boton">
+        <button type="button" class="btn btn-secondary" (click)="editarProyectos(item.id)" data-bs-toggle="modal" data-bs-target="#editarProyectos">
+          editar
+        </button>
+        <button type="button" class="btn btn-danger" (click)="borrarProyectos(item.id)">borrar</button>
+        </div>
+      </div>
+      <button *ngIf="boton" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#crearProyectos">
+        crear
+      </button>
+
+    <app-proyecto-add></app-proyecto-add>
+    <app-proyectodit [entradaEdu]="EditarPro"></app-proyectodit>
+</div>
+

@@ -1,0 +1,96 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Crear Experiencia</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="m-2" [formGroup]="form" class="m-2" (ngSubmit)="noEnviar($event)">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text"formControlName="nombre"
+            [ngClass]="{'is-invalid': Nombre?.errors, 'is-valid': !Nombre?.errors}"
+            class="form-control" id="nombre" aria-describedby="emailHelp">
+            <div *ngIf="Nombre?.errors">
+              <p *ngIf="Nombre?.hasError('required')" class="alert alert-danger">
+                Es requerido
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="lugar" class="form-label">Lugar:</label>
+            <input type="text"formControlName="lugar"
+            [ngClass]="{'is-invalid': Lugar?.errors, 'is-valid': !Lugar?.errors}"
+            class="form-control" id="lugar" aria-describedby="emailHelp">
+            <div *ngIf="Lugar?.errors">
+              <p *ngIf="Lugar?.hasError('required')" class="alert alert-danger">
+                Es requerido
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="jornada" class="form-label">Jornada:</label>
+            <input type="text"formControlName="jornada"
+            [ngClass]="{'is-invalid': Jornada?.errors, 'is-valid': !Jornada?.errors}"
+            class="form-control" id="jornada" aria-describedby="emailHelp">
+            <div *ngIf="Jornada?.errors">
+              <p *ngIf="Jornada?.hasError('required')" class="alert alert-danger">
+                Es requerido
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="inicio" class="form-label">Inicio:</label>
+            <input type="text"formControlName="inicio"
+            [ngClass]="{'is-invalid': Inicio?.errors, 'is-valid': !Inicio?.errors}"
+            class="form-control" id="inicio" aria-describedby="emailHelp">
+            <div *ngIf="Inicio?.errors">
+              <p *ngIf="Inicio?.hasError('required')" class="alert alert-danger">
+                Es requerido
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="fin" class="form-label">Fin:</label>
+            <input type="text"formControlName="fin"
+            [ngClass]="{'is-invalid': Fin?.errors, 'is-valid': !Fin?.errors}"
+            class="form-control" id="fin" aria-describedby="emailHelp">
+            <div *ngIf="Fin?.errors">
+              <p *ngIf="Fin?.hasError('required')" class="alert alert-danger">
+                Es requerido
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="domicilio" class="form-label">Domicilio:</label>
+            <input type="text"formControlName="domicilio"
+            [ngClass]="{'is-invalid': Domicilio?.errors, 'is-valid': !Domicilio?.errors}"
+            class="form-control" id="domicilio" aria-describedby="emailHelp">
+            <div *ngIf="Domicilio?.errors">
+              <p *ngIf="Domicilio?.hasError('required')" class="alert alert-danger">
+                Es requerido
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="urlImagen" class="form-label">UrlImagen:</label>
+            <input type="text"formControlName="urlImagen"
+            [ngClass]="{'is-invalid': UrlImagen?.errors, 'is-valid': !UrlImagen?.errors}"
+            class="form-control" id="urlImagen" aria-describedby="emailHelp">
+            <div *ngIf="UrlImagen?.errors">
+              <p *ngIf="UrlImagen?.hasError('required')" class="alert alert-danger">
+                Es requerido
+              </p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-dark" data-bs-dismiss="modal">Guardar</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

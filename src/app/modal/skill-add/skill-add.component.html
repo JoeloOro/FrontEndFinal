@@ -1,0 +1,42 @@
+<div class="modal fade" id="crearSkill" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Crear Experiencia</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="m-2" [formGroup]="form" class="m-2" (ngSubmit)="noEnviar($event)">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text"formControlName="nombre"
+            [ngClass]="{'is-invalid': Nombre?.errors, 'is-valid': !Nombre?.errors}"
+            class="form-control" id="nombre" aria-describedby="emailHelp">
+            <div *ngIf="Nombre?.errors">
+              <p *ngIf="Nombre?.hasError('required')" class="alert alert-danger">
+                Es requerido
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="porcentaje" class="form-label">Porcentaje:</label>
+            <input type="text"formControlName="porcentaje"
+            [ngClass]="{'is-invalid': Porcentaje?.errors, 'is-valid': !Porcentaje?.errors}"
+            class="form-control" id="porcentaje" aria-describedby="emailHelp">
+            <div *ngIf="Porcentaje?.errors">
+              <p *ngIf="Porcentaje?.hasError('required')" class="alert alert-danger">
+                Es requerido
+              </p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-dark" data-bs-dismiss="modal">Guardar</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+

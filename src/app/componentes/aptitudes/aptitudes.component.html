@@ -1,0 +1,24 @@
+<div class="skills">
+
+          <div class="skillsTitulo"><h2>Hard skills & Soft skills</h2></div>
+        <div *ngFor="let item of Skills">
+        <div>{{item.nombre}}</div>
+        <div class="progres">
+        <div class="progress">
+          <div class="progress-bar bg-danger" role="progressbar" aria-label="Danger example" [style.width.%]="item.porcentaje" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        </div>
+        <div *ngIf="boton">
+        <button type="button" class="btn btn-secondary" (click)="EditarSkill(item.id)" data-bs-toggle="modal" data-bs-target="#editarSkill">
+          editar
+        </button>
+        <button type="button" class="btn btn-danger" (click)="borrarSkill(item.id)">borrar</button>
+        </div>
+      </div>
+      <button *ngIf="boton" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#crearSkill">
+        crear
+      </button>
+    </div>
+<app-skill-add></app-skill-add>
+<app-skill-edit [entradaSki]="EditarSki"></app-skill-edit>
+

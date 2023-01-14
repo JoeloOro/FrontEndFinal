@@ -1,0 +1,56 @@
+<div class="info">
+  <div class="experienciaMenu">
+  <div class="experiencia"><h2>Experiencia</h2></div>
+
+    <div class="itemList" *ngFor="let item of experiencias">
+          <div class="logoImageConteiner">
+            <img class="logoImage"
+            src="">
+          </div>
+        <div class="listInfo">
+          <div>
+            <h3>{{item.nombre}}</h3>
+            <p>{{item.lugar}}</p>
+            <p><time>{{item.inicio}}</time> - <time>{{item.fin}}</time></p>
+          </div>
+        </div>
+        <div *ngIf="boton">
+        <button type="button" class="btn btn-secondary" (click)="editar(item.id)" data-bs-toggle="modal" data-bs-target="#editarExperiencia">
+          editar
+        </button>
+        <button type="button" class="btn btn-danger" (click)="borrar(item.id)">borrar</button>
+        </div>
+      </div>
+      <button *ngIf="boton" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        crear
+      </button>
+  </div>
+
+  <div class="educacion"><h2>Educación</h2>
+        <div *ngFor="let education of Educaciones">
+          <div>
+            <h3>{{education.nombre}}</h3>
+            <p>{{education.titulo}}</p>
+            <p><time>{{education.inicio}}</time> - <time>{{education.fin}}</time></p>
+
+            <div *ngIf="boton">
+            <button  type="button" class="btn btn-secondary" (click)="editarEducacion(education.id)" data-bs-toggle="modal" data-bs-target="#editarEducacion">
+              editar
+            </button>
+            <button type="button" class="btn btn-danger" (click)="borrarEducacion(education.id)">borrar</button>
+            </div>
+          </div>
+          <div *ngIf="boton">
+          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#crearEducacion">
+            crear
+          </button>
+          </div>
+        </div>
+  </div>
+    <app-experiencia-add></app-experiencia-add>
+    <app-experiencia-edit [entrada]="Editar"></app-experiencia-edit>
+
+    <app-educacion-edit [entradaEdu]="EditarEducacion"></app-educacion-edit>
+    <app-educacion-add></app-educacion-add>
+</div>
+

@@ -1,0 +1,61 @@
+<div class="modal fade" id="editarExperiencia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Experiencia</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="m-2" [formGroup]="form" class="m-2" (ngSubmit)="noEnviar($event)">
+          <div class="mb-3">
+            <label for="id" class="form-label">Id:</label>
+            <input type="text"formControlName="id" readonly= readonly
+            class="form-control" id="id" [(ngModel)]="expEdit.id">
+          </div>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text"formControlName="nombre"
+            class="form-control" id="nombre" [(ngModel)]="expEdit.nombre">
+          </div>
+          <div class="mb-3">
+            <label for="lugar" class="form-label">Lugar:</label>
+            <input type="text"formControlName="lugar" [(ngModel)]="expEdit.lugar"
+            class="form-control" id="lugar">
+          </div>
+          <div class="mb-3">
+            <label for="jornada" class="form-label">Jornada:</label>
+            <input type="text"formControlName="jornada"
+            class="form-control" id="jornada" [(ngModel)]="expEdit.jornada">
+          </div>
+          <div class="mb-3">
+            <label for="inicio" class="form-label">Inicio:</label>
+            <input type="text"formControlName="inicio"
+            class="form-control" id="inicio" [(ngModel)]="expEdit.inicio">
+          </div>
+          <div class="mb-3">
+            <label for="fin" class="form-label">Fin:</label>
+            <input type="text"formControlName="fin"
+            class="form-control" id="fin" [(ngModel)]="expEdit.fin">
+          </div>
+          <div class="mb-3">
+            <label for="ubicacion" class="form-label">Ubicacion:</label>
+            <input type="text"formControlName="ubicacion"
+            class="form-control" id="ubicacion" [(ngModel)]="expEdit.ubicacion">
+          </div>
+          <div class="mb-3">
+            <label for="urlImagen" class="form-label">UrlImagen:</label>
+            <input type="text"formControlName="urlImagen"
+            class="form-control" id="urlImagen" [(ngModel)]="expEdit.urlImagen">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-dark" data-bs-dismiss="modal">Guardar</button>
+          </div>
+        </form>
+
+
+
+    </div>
+  </div>
+</div>
+

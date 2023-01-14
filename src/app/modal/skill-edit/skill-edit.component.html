@@ -1,0 +1,36 @@
+<div class="modal fade" id="editarSkill" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Experiencia</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="m-2" [formGroup]="form" class="m-2" (ngSubmit)="noEnviar($event)">
+          <div class="mb-3">
+            <label for="id" class="form-label">Id:</label>
+            <input type="text"formControlName="id" readonly= readonly
+            class="form-control" id="id" [(ngModel)]="expEdit.id">
+          </div>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text"formControlName="nombre"
+            class="form-control" id="nombre" [(ngModel)]="expEdit.nombre">
+          </div>
+          <div class="mb-3">
+            <label for="porcentaje" class="form-label">Porcentaje:</label>
+            <input type="text"formControlName="porcentaje" [(ngModel)]="expEdit.porcentaje"
+            class="form-control" id="porcentaje">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-dark" data-bs-dismiss="modal" >Guardar</button>
+          </div>
+        </form>
+
+
+
+    </div>
+  </div>
+</div>
+

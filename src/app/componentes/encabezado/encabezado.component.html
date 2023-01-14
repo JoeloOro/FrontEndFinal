@@ -1,0 +1,30 @@
+<div class="IMG">
+
+<div class="registro">
+  <button *ngIf="boton != true"type="button" class="btn btn-danger" (click)="abrirIniciarSesion()">Iniciar Sesion</button>
+  <button *ngIf="boton" type="button" class="btn btn-danger" (click)="salirSesion()">Cerrar Sesion</button>
+</div>
+</div>
+
+<div class="body">
+<div class="Imagen"></div>
+<div class="header">
+
+  <div class="img"></div>
+
+  <div class="name"><h1>{{miPorfolio.nombre}}</h1></div>
+
+
+  <div>{{miPorfolio.posicion}}</div>
+
+
+  <div>{{miPorfolio.ubicacion}}</div>
+
+  <div *ngIf="boton">
+  <button  type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#editarEncabezado">
+    editar
+  </button>
+  </div>
+
+  <app-encabezado-edit></app-encabezado-edit>
+</div>
