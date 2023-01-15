@@ -9,7 +9,7 @@ import { Encabezado } from '../model/encabezado';
 })
 export class PorfolioService {
 
-  url="http://localhost:8080/";
+  url="https://backendfinal.onrender.com/";
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{

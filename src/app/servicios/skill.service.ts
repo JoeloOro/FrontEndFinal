@@ -7,7 +7,7 @@ import { Skill } from '../model/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  url="http://localhost:8080/skill/";
+  url="https://backendfinal.onrender.com/skill/";
   constructor(private http:HttpClient) { }
 
   public lista(): Observable<Skill[]>{

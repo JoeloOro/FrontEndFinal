@@ -8,7 +8,7 @@ import { ExperienciaEdit } from '../model/experiencia-edit';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  url="http://localhost:8080/experiencia/";
+  url="https://backendfinal.onrender.com/experiencia/";
   constructor(private http:HttpClient) { }
 
   public lista(): Observable<Experiencia[]>{
