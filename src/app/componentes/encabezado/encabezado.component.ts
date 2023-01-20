@@ -18,11 +18,17 @@ export class EncabezadoComponent implements OnInit{
   ngOnInit(): void {
     this.boton = this.uruario.admin
     console.log(this.boton)
+    this.cargarProyectos()
+
+  }
+
+  cargarProyectos():void{
     this.datosPorfolio.obtenerDatos().subscribe(data =>{
       console.log(data)
       this.miPorfolio=data;
     });
   }
+
   abrirIniciarSesion() {
     this.ruta.navigate(['/iniciar-sesion'])
   }

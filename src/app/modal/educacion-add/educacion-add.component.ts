@@ -55,7 +55,7 @@ export class EducacionAddComponent implements OnInit{
   noEnviar(event:Event) {
     ///const datos = new (this.Nombre, this.Lugar, this.Jornada, this.Inicio, this.Fin, this.UrlImagen)
     this.data.save(this.form.value).subscribe(data=>{
-      this.ruta.navigate([''])
+      window.location.reload()
     }, err =>{
       alert("error");
     });

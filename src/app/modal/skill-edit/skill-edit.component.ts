@@ -52,7 +52,7 @@ export class SkillEditComponent implements OnInit{
   noEnviar(event:Event) {
 
     this.datos.save(this.form.value).subscribe(data=>{
-      this.ruta.navigate([''])
+      window.location.reload()
     }, err =>{
       alert("error");
     });

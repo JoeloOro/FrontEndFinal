@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { interval } from 'rxjs';
+import { EncabezadoComponent } from 'src/app/componentes/encabezado/encabezado.component';
 import { Encabezado } from 'src/app/model/encabezado';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
@@ -68,7 +69,7 @@ export class EncabezadoEditComponent implements OnInit{
   noEnviar(event:Event) {
 
     this.datos.save(this.form.value).subscribe(data=>{
-      this.ruta.navigate([''])
+      window.location.reload()
     }, err =>{
       alert("error");
     });

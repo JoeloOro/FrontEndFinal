@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AptitudesComponent } from 'src/app/componentes/aptitudes/aptitudes.component';
 import { Experiencia } from 'src/app/model/experiencia';
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 
@@ -66,7 +67,7 @@ export class ExperienciaAddComponent implements OnInit{
   noEnviar(event:Event) {
     ///const datos = new (this.Nombre, this.Lugar, this.Jornada, this.Inicio, this.Fin, this.UrlImagen)
     this.data.save(this.form.value).subscribe(data=>{
-      this.ruta.navigate([''])
+      window.location.reload()
     }, err =>{
       alert("error");
     });
