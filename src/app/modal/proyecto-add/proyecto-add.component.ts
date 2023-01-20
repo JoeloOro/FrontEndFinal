@@ -33,7 +33,7 @@ export class ProyectoAddComponent  implements OnInit{
   noEnviar(event:Event) {
     ///const datos = new (this.Nombre, this.Lugar, this.Jornada, this.Inicio, this.Fin, this.UrlImagen)
     this.data.save(this.form.value).subscribe(data=>{
-      location.reload()
+      this.ruta.navigate([''])
     }, err =>{
       alert("error");
     });

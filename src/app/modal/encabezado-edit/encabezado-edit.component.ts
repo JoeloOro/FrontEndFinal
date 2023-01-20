@@ -68,7 +68,7 @@ export class EncabezadoEditComponent implements OnInit{
   noEnviar(event:Event) {
 
     this.datos.save(this.form.value).subscribe(data=>{
-      location.reload()
+      this.ruta.navigate([''])
     }, err =>{
       alert("error");
     });

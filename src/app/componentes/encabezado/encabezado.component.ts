@@ -28,7 +28,7 @@ export class EncabezadoComponent implements OnInit{
   }
   salirSesion() {
     this.uruario.AdminFalse
-    location.reload()
+    this.ruta.navigate([''])
   }
 
 }

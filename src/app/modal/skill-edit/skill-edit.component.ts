@@ -30,9 +30,6 @@ export class SkillEditComponent implements OnInit{
       this.cargaIf())}
   ngOnInit(): void {
     this.carga();
-    if (this.edit != this.entradaSki) {
-
-    }
   }
 
   cargaIf(){
@@ -55,7 +52,7 @@ export class SkillEditComponent implements OnInit{
   noEnviar(event:Event) {
 
     this.datos.save(this.form.value).subscribe(data=>{
-      location.reload()
+      this.ruta.navigate([''])
     }, err =>{
       alert("error");
     });

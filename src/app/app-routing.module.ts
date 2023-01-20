@@ -10,7 +10,7 @@ import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-ses
 const routes: Routes = [
   {path:"porfolio",component:PorfolioComponent},
   {path:"iniciar-sesion",component:IniciarSesionComponent},
-  {path:"",redirectTo:"iniciar-sesion",pathMatch:"full"}
+  {path:"",redirectTo:"porfolio",pathMatch:"full"}
 ];
 
 @NgModule({
